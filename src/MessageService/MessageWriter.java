@@ -1,4 +1,4 @@
-package Messenger;
+package MessageService;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -11,7 +11,7 @@ package Messenger;
  * This is the interface for reading messages intended to be compliant with
  * DIP and Liskov's Substitution Principle
  */
-public interface MessageReader {
+public interface MessageWriter {
     
-    public abstract String readMessage();
+    public abstract void writeMessage(String message);
 }

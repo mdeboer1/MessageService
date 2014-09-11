@@ -1,7 +1,4 @@
-package Messenger;
-
-
-import Messenger.MessageWriter;
+package MessageService;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -11,12 +8,10 @@ import Messenger.MessageWriter;
 /**
  *
  * @author mdeboer1
+ * This is the interface for reading messages intended to be compliant with
+ * DIP and Liskov's Substitution Principle
  */
-public class ConsoleMessageWriter implements MessageWriter{
-
-    @Override
-    public void writeMessage(String message) {
-        System.out.println(message);
-    }
+public interface MessageReader {
     
+    public abstract String readMessage();
 }
