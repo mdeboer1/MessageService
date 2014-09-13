@@ -10,6 +10,7 @@ import java.util.Random;
 /**
  *
  * @author mdeboer1
+ * This class randomly selects a message from an array of Strings.
  */
 public class RandomMessageReader implements MessageReader{
     

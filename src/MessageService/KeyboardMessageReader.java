@@ -5,11 +5,12 @@ package MessageService;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-import MessageService.MessageReader;
+
 import java.util.Scanner;
 /**
  *
  * @author mdeboer1
+ * This class takes a typed in message from the keyboard.
  */
 public class KeyboardMessageReader implements MessageReader{
     

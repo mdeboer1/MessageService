@@ -1,8 +1,4 @@
 package MessageService;
-
-
-import MessageService.MessageWriter;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -11,6 +7,7 @@ import MessageService.MessageWriter;
 /**
  *
  * @author mdeboer1
+ * This class writes a message to the console.
  */
 public class ConsoleMessageWriter implements MessageWriter{
 

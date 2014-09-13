@@ -16,9 +16,9 @@ package MessageService;
 public class Startup {
         public static void main(String[] args) {
         
-        MessageWriter writer = new ConsoleMessageWriter();
+//        MessageWriter writer = new ConsoleMessageWriter();
 //        MessageReader reader = new KeyboardMessageReader();
-//        MessageWriter writer = new GuiMessageWriter();
+        MessageWriter writer = new GuiMessageWriter();
         MessageReader reader = new RandomMessageReader();
         
         MessageManager manager = new MessageManager(writer, reader);
