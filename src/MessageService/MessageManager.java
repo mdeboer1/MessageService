@@ -19,7 +19,6 @@ public class MessageManager {
     public MessageManager(MessageWriter writer, MessageReader reader){
         this.reader = reader;
         this.writer = writer;
-        
     }
     
     public void manageMessage(){

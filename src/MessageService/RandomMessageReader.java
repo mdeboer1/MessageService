@@ -10,15 +10,21 @@ import java.util.Random;
 /**
  *
  * @author mdeboer1
- * This class randomly selects a message from an array of Strings.
+ * This class randomly selects a message from an array of Strings.  All properties
+ * are declared final (Encapsulation) and the class only performs that actions
+ * required of it (SRP), which is create an array of Strings, and randomly select
+ * a String to be returned.
  */
 public class RandomMessageReader implements MessageReader{
     
-    public String readMessage(){
-        String [] randomMessage = {"Hello there!", " Today is a great day!", 
+    private String [] randomMessage = {"Hello there!", " Today is a great day!", 
             "Have a wonderful day!", "Eat your vegetables!", "Somebody take my stapler?"};
-        Random random = new Random();
-        int randomNum = random.nextInt(5);
+    private Random random = new Random();
+    private int randomNum;
+    
+    @Override
+    public String readMessage(){
+        randomNum = random.nextInt(5);
         return randomMessage[randomNum];
     }
 }
