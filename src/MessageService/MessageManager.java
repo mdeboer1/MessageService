@@ -15,7 +15,7 @@ package MessageService;
  * constructor.  This hides all Reader and Writer classes from the start up.
  */
 public class MessageManager {
-    private String write, read;
+    
     private MessageReader reader;
     private MessageWriter writer;
     

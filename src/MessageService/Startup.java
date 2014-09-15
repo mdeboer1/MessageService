@@ -18,7 +18,6 @@ import javax.swing.JOptionPane;
 public class Startup {
         public static void main(String[] args) {
 
-            
             String read, write;
                       
             read = JOptionPane.showInputDialog("How would you like to input the message?" +
