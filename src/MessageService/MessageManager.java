@@ -10,16 +10,36 @@ package MessageService;
 /**
  *
  * @author mdeboer1
- * This class delegates the responsibilities to lower classes.  
+ * This class delegates the responsibilities to lower classes.  It receives two 
+ * strings from the start up class, and creates the necessary objects in the 
+ * constructor.  This hides all Reader and Writer classes from the start up.
  */
 public class MessageManager {
-    private MessageWriter writer;
+    private String write, read;
     private MessageReader reader;
+    private MessageWriter writer;
     
-    public MessageManager(MessageWriter writer, MessageReader reader){
-        this.reader = reader;
-        this.writer = writer;
-    }
+    public MessageManager(String write, String read){
+        switch (read) {
+            case "1":
+                reader = new KeyboardMessageReader();
+                break;
+            case "2":
+                reader = new GuiMessageReader();
+                break;
+            case "3":
+                reader = new RandomMessageReader();
+                break;
+        }
+        switch (write) {
+            case "1":
+                writer = new ConsoleMessageWriter();
+                break;
+            case "2":
+                writer = new GuiMessageWriter();
+                break;
+        }
+     }
     
     public void manageMessage(){
         String message = reader.readMessage();
